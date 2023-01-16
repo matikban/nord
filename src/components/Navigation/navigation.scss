@@ -1,0 +1,49 @@
+@import "../../stylesheets/variables";
+@import "../../stylesheets/mixins";
+
+.main-nav {
+    height: 56px;
+    background: $black;
+
+    @include Mobile {
+
+        &.active {
+            position: fixed;
+            z-index: 10000;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .main-menu {
+                display: block;
+            }
+        }
+
+    }
+
+    .mobile-nav {
+        position: absolute;
+        top: 28px;
+        right: 15px;
+        cursor: pointer;
+        display: none;
+
+        &:after {
+            content: "";
+            background-image: url("../../assets/images/icons/icon-hamburger.svg");
+            width: 24px;
+            height: 20px;
+            background-size: 24px 20px;
+            position: absolute;
+            right:0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @include Mobile {
+            display: block;
+        }
+    }
+}

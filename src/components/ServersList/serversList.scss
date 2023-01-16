@@ -1,0 +1,73 @@
+@import "../../stylesheets/variables";
+@import "../../stylesheets/mixins";
+
+.server-list {
+    position: fixed;
+    width: 558px;
+    height: calc(100vh - 112px);
+    left: 50%;
+    bottom: 0;
+    transform: translateX( -50%);
+    background: $white;
+    border-radius: 10px 10px 0 0 ;
+    overflow-y: scroll;
+    box-sizing: border-box;
+
+    @include Mobile {
+        width: calc(100% - 30px);
+        height: calc(100vh - 70px);
+    }
+
+
+    &__filters{
+        background-color: $purple;
+        position: sticky;
+        top:0;
+
+        &__column {
+            width: 50%;
+            text-align: center;
+            padding: 20px 0;
+
+            span {
+                color: $white;
+                cursor: pointer;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    background-image: url("../../assets/images/icons/icon-sort.svg");
+                    width: 20px;
+                    height: 14px;
+                    background-size: 20px 14px;
+                    position: absolute;
+                    right:-20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            width: 100%;
+            padding: 12px 0;
+            cursor: pointer;
+
+            span {
+                width: 50%;
+                text-align: center;
+                @include font(16px, 500, $grey-darkest, none, 21px)
+            }
+
+            &:hover {
+                background-color: $grey-light;
+            }
+        }
+    }
+}

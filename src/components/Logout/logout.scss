@@ -1,0 +1,18 @@
+@import "../../stylesheets/variables";
+@import "../../stylesheets/mixins";
+
+.logout {
+    background: none;
+    color: $white;
+    padding: 0 12px;
+    text-decoration: none;
+    transition: opacity .3s;
+    border: none;
+    @include font(16px, 500, $white, none, 16px);
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover, &.active  {
+        opacity: .7;
+    }
+}

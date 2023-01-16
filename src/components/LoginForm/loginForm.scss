@@ -1,0 +1,52 @@
+@import "../../stylesheets/mixins";
+@import "../../stylesheets/variables";
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    background: $white;
+    width: 570px;
+    top:50%;
+    left: 50%;
+    padding: 32px;
+    gap: 10px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    box-sizing: border-box;
+
+    @include Mobile {
+        width: calc(100% - 30px);
+    }
+
+    &__field {
+        width: 100%;
+    }
+
+    input {
+        @include inputStyle;
+    }
+
+    label {
+        @include font(14px, 500, $grey-dark, none, 18px);
+        display: block;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    .button {
+        margin-top: 28px;
+    }
+
+    .error,.success {
+        padding: 0;
+        margin: 0;
+        @include font(16px, 500, $red, none, 16px)
+    }
+
+    .success {
+       color: $green;
+    }
+}

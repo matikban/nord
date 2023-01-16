@@ -1,0 +1,54 @@
+@import "stylesheets/variables";
+
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  font-family: $medium;
+  background: transparent url("./assets/images/bg/contentbackground.png") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+.page-404 {
+  position: fixed;
+  width: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $white;
+  padding: 15px;
+  border-radius: 10px;
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    margin-top: 5px;
+  }
+}

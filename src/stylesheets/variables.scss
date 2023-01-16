@@ -1,0 +1,24 @@
+$black: #000000;
+$white: #ffffff;
+$grey: #d0d1d3;
+$grey-dark: #8A8C91;
+$grey-light: #E8E8E9;
+$grey-darkest: #383C43;
+$purple: #6E29F5;
+$red: red;
+$green: green;
+
+@font-face {
+    font-family: "RobotoRegular";
+    src: local("RobotoRegular"),
+    url("../assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+  @font-face {
+    font-family: "RobotoMedium";
+    src: local("RobotoMedium"),
+    url("../assets/fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+
+$regular: "RobotoRegular";
+$medium: "RobotoMedium";

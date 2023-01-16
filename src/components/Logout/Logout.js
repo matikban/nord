@@ -9,7 +9,9 @@ export default function LogoutButton() {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    const menu = document.querySelector(".js-nav");
     dispatch(logout());
+    menu.classList.remove("active");
     navigate('/login');
   };
 

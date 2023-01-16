@@ -13,9 +13,16 @@ function Navigation() {
 
     const mobileMenuToggler = () => {
         menuRef.current.classList.toggle("active");
+
+        const links = document.querySelectorAll(".main-menu li a");
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                menuRef.current.classList.remove("active");
+            })
+        })
     }
     return(
-        <div className="main-nav flex align-center space-between" ref={menuRef}>
+        <div className="main-nav flex align-center space-between js-nav" ref={menuRef}>
             <Logo
                 src={logoIcon}
                 title="TesoServers Logo"
